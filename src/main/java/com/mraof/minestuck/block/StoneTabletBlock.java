@@ -27,7 +27,7 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class StoneTabletBlock extends DecorBlock //stone slab is the same as stone tablet, both are used in different circumstances
+public class StoneTabletBlock extends CustomShapeBlock //stone slab is the same as stone tablet, both are used in different circumstances
 {
 	public static final BooleanProperty CARVED = MSProperties.CARVED;
 	
@@ -91,7 +91,7 @@ public class StoneTabletBlock extends DecorBlock //stone slab is the same as sto
 	@Override
 	public BlockState getStateForPlacement(BlockItemUseContext context)
 	{
-		return context.getClickedFace() == Direction.UP ? super.getStateForPlacement(context) : Blocks.AIR.defaultBlockState();
+		return context.getClickedFace() == Direction.UP ? super.getStateForPlacement(context) : null;
 	}
 	
 	@Override

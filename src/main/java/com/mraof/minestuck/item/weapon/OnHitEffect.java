@@ -1,6 +1,7 @@
 package com.mraof.minestuck.item.weapon;
 
 import com.google.common.collect.ImmutableList;
+import com.mraof.minestuck.effects.CreativeShockEffect;
 import com.mraof.minestuck.entity.underling.UnderlingEntity;
 import com.mraof.minestuck.event.ServerEventHandler;
 import com.mraof.minestuck.item.MSItems;
@@ -25,10 +26,13 @@ import net.minecraft.potion.Effects;
 import net.minecraft.util.*;
 import net.minecraft.util.math.*;
 import net.minecraft.util.math.vector.Vector3i;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.text.IFormattableTextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 
 import java.util.List;
 import java.util.Random;
@@ -130,7 +134,7 @@ public interface OnHitEffect
 	String SORD_DROP_MESSAGE = "drop_message";
 	
 	OnHitEffect SORD_DROP = (stack, target, attacker) -> {
-		if(!attacker.getCommandSenderWorld().isClientSide && attacker.getRandom().nextFloat() < .25)
+		if(!attacker.level.isClientSide && attacker.getRandom().nextFloat() < .25)
 		{
 			ItemEntity sord = new ItemEntity(attacker.level, attacker.getX(), attacker.getY(), attacker.getZ(), stack.copy());
 			sord.getItem().setCount(1);
@@ -177,7 +181,7 @@ public interface OnHitEffect
 		}
 	};
 	
-	OnHitEffect SPACE_TELEPORT = requireAspect(SPACE, onCrit((stack, target, attacker) -> {
+	OnHitEffect SPACE_TELEPORT = withoutCreativeShock(requireAspect(SPACE, onCrit((stack, target, attacker) -> {
 		double oldPosX = attacker.getX();
 		double oldPosY = attacker.getY();
 		double oldPosZ = attacker.getZ();
@@ -199,7 +203,7 @@ public interface OnHitEffect
 				break;
 			}
 		}
-	}));
+	})));
 	
 	static OnHitEffect setOnFire(int duration)
 	{
@@ -242,7 +246,7 @@ public interface OnHitEffect
 	
 	/**
 	 * Checks for attacks within three blocks of a point three blocks behind the targets back(covering the whole standard attack range of a player)
-	*/
+	 */
 	static OnHitEffect backstab(float backstabDamage)
 	{
 		return (stack, target, attacker) -> {
@@ -250,10 +254,13 @@ public interface OnHitEffect
 			Vector3i targetBackVec3i = target.blockPosition().relative(direction, 3); //three blocks behind the targets back
 			if(targetBackVec3i.closerThan(attacker.blockPosition(), 3))
 			{
-				for(int i = 0; i < 4; i++)
+				if (target.level instanceof ServerWorld)
 				{
-					target.level.addParticle(ParticleTypes.DAMAGE_INDICATOR, true, target.blockPosition().relative(direction).getX(), target.getEyePosition(1F).y - 1, target.blockPosition().relative(direction).getZ(), 0.1,0.1,0.1);
+					((ServerWorld) target.level).sendParticles(ParticleTypes.DAMAGE_INDICATOR,
+							target.blockPosition().relative(direction).getX(), target.getEyePosition(1F).y - 1, target.blockPosition().relative(direction).getZ(),
+							4, 0, 0, 0, 0.1);
 				}
+				
 				
 				DamageSource source;
 				if(attacker instanceof PlayerEntity)
@@ -297,7 +304,7 @@ public interface OnHitEffect
 		return (stack, target, attacker) -> {
 			float randFloat = knockback + attacker.getRandom().nextFloat();
 			
-			if(!attacker.getCommandSenderWorld().isClientSide)
+			if(!attacker.level.isClientSide)
 			{
 				target.setDeltaMovement(target.getDeltaMovement().x * randFloat, target.getDeltaMovement().y, target.getDeltaMovement().z * randFloat);
 			}
@@ -326,6 +333,20 @@ public interface OnHitEffect
 			}
 		};
 	}
+	
+	/**
+	 * Prevents effect from working if the entity is a player subject to the effects of creative shock
+	 */
+	static OnHitEffect withoutCreativeShock(OnHitEffect effect)
+	{
+		return (stack, target, attacker) -> {
+			if(!(attacker instanceof PlayerEntity) || !CreativeShockEffect.doesCreativeShockLimit((PlayerEntity) attacker, CreativeShockEffect.LIMIT_MOBILITY_ITEMS))
+			{
+				effect.onHit(stack, target, attacker);
+			}
+		};
+	}
+	
 	
 	static OnHitEffect onCrit(OnHitEffect effect)
 	{

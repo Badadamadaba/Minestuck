@@ -107,6 +107,7 @@ public class MSItems
 	public static final Item QUANTUM_SABRE = getNull();
 	public static final Item SHATTER_BEACON = getNull();
 	public static final Item SHATTER_BACON = getNull();
+	public static final Item SUBTRACTSHUMIDIRE_ZOMORRODNEGATIVE = getNull();
 	
 	public static final Item DAGGER = getNull();
 	public static final Item NIFE = getNull();
@@ -305,12 +306,14 @@ public class MSItems
 	public static final Item IRON_LASS_SKIRT = getNull();
 	public static final Item IRON_LASS_SHOES = getNull();
 	
-	public static final Item PROSPIT_SHIRT = getNull();
-	public static final Item PROSPIT_PANTS = getNull();
-	public static final Item PROSPIT_SHOES = getNull();
-	public static final Item DERSE_SHIRT = getNull();
-	public static final Item DERSE_PANTS = getNull();
-	public static final Item DERSE_SHOES = getNull();
+	public static final MSArmorItem PROSPIT_CIRCLET = getNull();
+	public static final MSArmorItem PROSPIT_SHIRT = getNull();
+	public static final MSArmorItem PROSPIT_PANTS = getNull();
+	public static final MSArmorItem PROSPIT_SHOES = getNull();
+	public static final MSArmorItem DERSE_CIRCLET = getNull();
+	public static final MSArmorItem DERSE_SHIRT = getNull();
+	public static final MSArmorItem DERSE_PANTS = getNull();
+	public static final MSArmorItem DERSE_SHOES = getNull();
 	
 	//Core Items
 	public static final Item BOONDOLLARS = getNull();
@@ -351,6 +354,7 @@ public class MSItems
 	public static final Item FUNGAL_SPORE = getNull();
 	public static final Item SPOREO = getNull();
 	public static final Item MOREL_MUSHROOM = getNull();
+	public static final Item SUSHROOM = getNull();
 	public static final Item FRENCH_FRY = getNull();
 	public static final Item STRAWBERRY_CHUNK = getNull();
 	public static final Item FOOD_CAN = getNull();
@@ -415,6 +419,7 @@ public class MSItems
 	public static final Item OBSIDIAN_BUCKET = getNull();
 	
 	//Alchemy Items
+	public static final Item PLUTONIUM_CORE = getNull();
 	public static final Item GRIMOIRE = getNull();
 	public static final Item BATTERY = getNull();
 	public static final Item BARBASOL = getNull();
@@ -560,32 +565,67 @@ public class MSItems
 		registerItemBlock(registry, THOUGHT_DIRT, MSItemGroup.LANDS);
 		registerItemBlock(registry, COARSE_STONE, MSItemGroup.LANDS);
 		registerItemBlock(registry, CHISELED_COARSE_STONE, MSItemGroup.LANDS);
+		registerItemBlock(registry, COARSE_STONE_BRICKS, MSItemGroup.LANDS);
+		registerItemBlock(registry, COARSE_STONE_COLUMN, MSItemGroup.LANDS);
+		registerItemBlock(registry, CHISELED_COARSE_STONE_BRICKS, MSItemGroup.LANDS);
+		registerItemBlock(registry, CRACKED_COARSE_STONE_BRICKS, MSItemGroup.LANDS);
+		registerItemBlock(registry, MOSSY_COARSE_STONE, MSItemGroup.LANDS);
 		registerItemBlock(registry, SHADE_STONE, MSItemGroup.LANDS);
-		registerItemBlock(registry, SHADE_BRICKS, MSItemGroup.LANDS);
 		registerItemBlock(registry, SMOOTH_SHADE_STONE, MSItemGroup.LANDS);
-		registerItemBlock(registry, FROST_BRICKS, MSItemGroup.LANDS);
+		registerItemBlock(registry, SHADE_BRICKS, MSItemGroup.LANDS);
+		registerItemBlock(registry, SHADE_COLUMN, MSItemGroup.LANDS);
+		registerItemBlock(registry, CHISELED_SHADE_BRICKS, MSItemGroup.LANDS);
+		registerItemBlock(registry, CRACKED_SHADE_BRICKS, MSItemGroup.LANDS);
+		registerItemBlock(registry, MOSSY_SHADE_BRICKS, MSItemGroup.LANDS);
+		registerItemBlock(registry, BLOOD_SHADE_BRICKS, MSItemGroup.LANDS);
+		registerItemBlock(registry, TAR_SHADE_BRICKS, MSItemGroup.LANDS);
 		registerItemBlock(registry, FROST_TILE, MSItemGroup.LANDS);
+		registerItemBlock(registry, CHISELED_FROST_TILE, MSItemGroup.LANDS);
+		registerItemBlock(registry, FROST_BRICKS, MSItemGroup.LANDS);
+		registerItemBlock(registry, FROST_COLUMN, MSItemGroup.LANDS);
 		registerItemBlock(registry, CHISELED_FROST_BRICKS, MSItemGroup.LANDS);
+		registerItemBlock(registry, CRACKED_FROST_BRICKS, MSItemGroup.LANDS);
+		registerItemBlock(registry, FLOWERY_FROST_BRICKS, MSItemGroup.LANDS);
 		registerItemBlock(registry, CAST_IRON, MSItemGroup.LANDS);
 		registerItemBlock(registry, CHISELED_CAST_IRON, MSItemGroup.LANDS);
 		registerItemBlock(registry, STEEL_BEAM, MSItemGroup.LANDS);
+		registerItemBlock(registry, MYCELIUM_COBBLESTONE, MSItemGroup.LANDS);
+		registerItemBlock(registry, MYCELIUM_STONE, MSItemGroup.LANDS);
+		registerItemBlock(registry, POLISHED_MYCELIUM_STONE, MSItemGroup.LANDS);
 		registerItemBlock(registry, MYCELIUM_BRICKS, MSItemGroup.LANDS);
+		registerItemBlock(registry, MYCELIUM_COLUMN, MSItemGroup.LANDS);
+		registerItemBlock(registry, CHISELED_MYCELIUM_BRICKS, MSItemGroup.LANDS);
+		registerItemBlock(registry, CRACKED_MYCELIUM_BRICKS, MSItemGroup.LANDS);
+		registerItemBlock(registry, MOSSY_MYCELIUM_BRICKS, MSItemGroup.LANDS);
+		registerItemBlock(registry, FLOWERY_MYCELIUM_BRICKS, MSItemGroup.LANDS);
 		registerItemBlock(registry, BLACK_STONE, MSItemGroup.LANDS);
+		registerItemBlock(registry, POLISHED_BLACK_STONE, MSItemGroup.LANDS);
+		registerItemBlock(registry, BLACK_COBBLESTONE, MSItemGroup.LANDS);
+		registerItemBlock(registry, BLACK_STONE_BRICKS, MSItemGroup.LANDS);
+		registerItemBlock(registry, BLACK_STONE_COLUMN, MSItemGroup.LANDS);
+		registerItemBlock(registry, CHISELED_BLACK_STONE_BRICKS, MSItemGroup.LANDS);
+		registerItemBlock(registry, CRACKED_BLACK_STONE_BRICKS, MSItemGroup.LANDS);
 		registerItemBlock(registry, BLACK_SAND, MSItemGroup.LANDS);
+		registerItemBlock(registry, DECREPIT_STONE_BRICKS, MSItemGroup.LANDS);
 		registerItemBlock(registry, FLOWERY_MOSSY_COBBLESTONE, MSItemGroup.LANDS);
+		registerItemBlock(registry, MOSSY_DECREPIT_STONE_BRICKS, MSItemGroup.LANDS);
 		registerItemBlock(registry, FLOWERY_MOSSY_STONE_BRICKS, MSItemGroup.LANDS);
 		registerItemBlock(registry, COARSE_END_STONE, MSItemGroup.LANDS);
 		registerItemBlock(registry, END_GRASS, MSItemGroup.LANDS);
 		registerItemBlock(registry, CHALK, MSItemGroup.LANDS);
-		registerItemBlock(registry, CHALK_BRICKS, MSItemGroup.LANDS);
-		registerItemBlock(registry, CHISELED_CHALK_BRICKS, MSItemGroup.LANDS);
 		registerItemBlock(registry, POLISHED_CHALK, MSItemGroup.LANDS);
+		registerItemBlock(registry, CHALK_BRICKS, MSItemGroup.LANDS);
+		registerItemBlock(registry, CHALK_COLUMN, MSItemGroup.LANDS);
+		registerItemBlock(registry, CHISELED_CHALK_BRICKS, MSItemGroup.LANDS);
+		registerItemBlock(registry, MOSSY_CHALK_BRICKS, MSItemGroup.LANDS);
+		registerItemBlock(registry, FLOWERY_CHALK_BRICKS, MSItemGroup.LANDS);
 		registerItemBlock(registry, PINK_STONE, MSItemGroup.LANDS);
 		registerItemBlock(registry, PINK_STONE_BRICKS, MSItemGroup.LANDS);
 		registerItemBlock(registry, CHISELED_PINK_STONE_BRICKS, MSItemGroup.LANDS);
 		registerItemBlock(registry, CRACKED_PINK_STONE_BRICKS, MSItemGroup.LANDS);
 		registerItemBlock(registry, MOSSY_PINK_STONE_BRICKS, MSItemGroup.LANDS);
 		registerItemBlock(registry, POLISHED_PINK_STONE, MSItemGroup.LANDS);
+		registerItemBlock(registry, PINK_STONE_COLUMN, MSItemGroup.LANDS);
 		registerItemBlock(registry, BROWN_STONE, MSItemGroup.LANDS);
 		registerItemBlock(registry, BROWN_STONE_BRICKS, MSItemGroup.LANDS);
 		registerItemBlock(registry, BROWN_STONE_COLUMN, MSItemGroup.LANDS);
@@ -609,9 +649,17 @@ public class MSItems
 		registerItemBlock(registry, GREEN_STONE_BRICK_SALAMANDER_RIGHT, MSItemGroup.MAIN);
 		registerItemBlock(registry, GREEN_STONE_BRICK_SKAIA, MSItemGroup.MAIN);
 		registerItemBlock(registry, GREEN_STONE_BRICK_TURTLE, MSItemGroup.MAIN);
+		registerItemBlock(registry, SANDSTONE_COLUMN, MSItemGroup.LANDS);
+		registerItemBlock(registry, CHISELED_SANDSTONE_COLUMN, MSItemGroup.LANDS);
+		registerItemBlock(registry, RED_SANDSTONE_COLUMN, MSItemGroup.LANDS);
+		registerItemBlock(registry, CHISELED_RED_SANDSTONE_COLUMN, MSItemGroup.LANDS);
+		registerItemBlock(registry, UNCARVED_WOOD, MSItemGroup.LANDS);
+		registerItemBlock(registry, CHIPBOARD, MSItemGroup.LANDS);
+		registerItemBlock(registry, WOOD_SHAVINGS, MSItemGroup.LANDS);
 		registerItemBlock(registry, DENSE_CLOUD, MSItemGroup.LANDS);
 		registerItemBlock(registry, BRIGHT_DENSE_CLOUD, MSItemGroup.LANDS);
 		registerItemBlock(registry, SUGAR_CUBE, MSItemGroup.LANDS);
+		registerItemBlock(registry, SPIKES, MSItemGroup.MAIN);
 		
 		registerItemBlock(registry, GLOWING_LOG, MSItemGroup.LANDS);
 		registerItemBlock(registry, FROST_LOG, MSItemGroup.LANDS);
@@ -709,21 +757,31 @@ public class MSItems
 		registerItemBlock(registry, PARCEL_PYXIS, MSItemGroup.LANDS);
 		registerItemBlock(registry, PYXIS_LID, MSItemGroup.LANDS);
 		registerItemBlock(registry, new StoneTabletItem(MSBlocks.STONE_SLAB, new Item.Properties().tab(MSItemGroup.LANDS)));
+		registerItemBlock(registry, NAKAGATOR_STATUE, MSItemGroup.LANDS);
 		
 		registerItemBlock(registry, BLACK_CASTLE_BRICK_STAIRS, MSItemGroup.MAIN);
 		registerItemBlock(registry, DARK_GRAY_CASTLE_BRICK_STAIRS, MSItemGroup.MAIN);
 		registerItemBlock(registry, LIGHT_GRAY_CASTLE_BRICK_STAIRS, MSItemGroup.MAIN);
 		registerItemBlock(registry, WHITE_CASTLE_BRICK_STAIRS, MSItemGroup.MAIN);
 		registerItemBlock(registry, COARSE_STONE_STAIRS, MSItemGroup.LANDS);
+		registerItemBlock(registry, COARSE_STONE_BRICK_STAIRS, MSItemGroup.LANDS);
+		registerItemBlock(registry, SHADE_STAIRS, MSItemGroup.LANDS);
 		registerItemBlock(registry, SHADE_BRICK_STAIRS, MSItemGroup.LANDS);
+		registerItemBlock(registry, FROST_TILE_STAIRS, MSItemGroup.LANDS);
 		registerItemBlock(registry, FROST_BRICK_STAIRS, MSItemGroup.LANDS);
 		registerItemBlock(registry, CAST_IRON_STAIRS, MSItemGroup.LANDS);
+		registerItemBlock(registry, BLACK_STONE_STAIRS, MSItemGroup.LANDS);
+		registerItemBlock(registry, BLACK_STONE_BRICK_STAIRS, MSItemGroup.LANDS);
+		registerItemBlock(registry, MYCELIUM_STAIRS, MSItemGroup.LANDS);
 		registerItemBlock(registry, MYCELIUM_BRICK_STAIRS, MSItemGroup.LANDS);
 		registerItemBlock(registry, CHALK_STAIRS, MSItemGroup.LANDS);
 		registerItemBlock(registry, CHALK_BRICK_STAIRS, MSItemGroup.LANDS);
 		registerItemBlock(registry, FLOWERY_MOSSY_STONE_BRICK_STAIRS, MSItemGroup.LANDS);
+		registerItemBlock(registry, PINK_STONE_STAIRS, MSItemGroup.LANDS);
 		registerItemBlock(registry, PINK_STONE_BRICK_STAIRS, MSItemGroup.LANDS);
+		registerItemBlock(registry, BROWN_STONE_STAIRS, MSItemGroup.LANDS);
 		registerItemBlock(registry, BROWN_STONE_BRICK_STAIRS, MSItemGroup.LANDS);
+		registerItemBlock(registry, GREEN_STONE_STAIRS, MSItemGroup.MAIN);
 		registerItemBlock(registry, GREEN_STONE_BRICK_STAIRS, MSItemGroup.MAIN);
 		registerItemBlock(registry, RAINBOW_PLANKS_STAIRS, MSItemGroup.LANDS);
 		registerItemBlock(registry, END_PLANKS_STAIRS, MSItemGroup.LANDS);
@@ -736,19 +794,54 @@ public class MSItems
 		registerItemBlock(registry, LIGHT_GRAY_CASTLE_BRICK_SLAB, MSItemGroup.MAIN);
 		registerItemBlock(registry, WHITE_CASTLE_BRICK_SLAB, MSItemGroup.MAIN);
 		registerItemBlock(registry, COARSE_STONE_SLAB, MSItemGroup.LANDS);
+		registerItemBlock(registry, COARSE_STONE_BRICK_SLAB, MSItemGroup.LANDS);
 		registerItemBlock(registry, CHALK_SLAB, MSItemGroup.LANDS);
 		registerItemBlock(registry, CHALK_BRICK_SLAB, MSItemGroup.LANDS);
+		registerItemBlock(registry, PINK_STONE_SLAB, MSItemGroup.LANDS);
 		registerItemBlock(registry, PINK_STONE_BRICK_SLAB, MSItemGroup.LANDS);
+		registerItemBlock(registry, BROWN_STONE_SLAB, MSItemGroup.LANDS);
 		registerItemBlock(registry, BROWN_STONE_BRICK_SLAB, MSItemGroup.LANDS);
+		registerItemBlock(registry, GREEN_STONE_SLAB, MSItemGroup.MAIN);
 		registerItemBlock(registry, GREEN_STONE_BRICK_SLAB, MSItemGroup.MAIN);
 		registerItemBlock(registry, RAINBOW_PLANKS_SLAB, MSItemGroup.LANDS);
 		registerItemBlock(registry, END_PLANKS_SLAB, MSItemGroup.LANDS);
 		registerItemBlock(registry, DEAD_PLANKS_SLAB, MSItemGroup.LANDS);
 		registerItemBlock(registry, TREATED_PLANKS_SLAB, MSItemGroup.LANDS);
+		registerItemBlock(registry, BLACK_STONE_SLAB, MSItemGroup.LANDS);
+		registerItemBlock(registry, BLACK_STONE_BRICK_SLAB, MSItemGroup.LANDS);
+		registerItemBlock(registry, MYCELIUM_SLAB, MSItemGroup.LANDS);
 		registerItemBlock(registry, MYCELIUM_BRICK_SLAB, MSItemGroup.LANDS);
 		registerItemBlock(registry, FLOWERY_MOSSY_STONE_BRICK_SLAB, MSItemGroup.LANDS);
+		registerItemBlock(registry, FROST_TILE_SLAB, MSItemGroup.LANDS);
 		registerItemBlock(registry, FROST_BRICK_SLAB, MSItemGroup.LANDS);
+		registerItemBlock(registry, SHADE_SLAB, MSItemGroup.LANDS);
 		registerItemBlock(registry, SHADE_BRICK_SLAB, MSItemGroup.LANDS);
+		
+		registerItemBlock(registry, TRAJECTORY_BLOCK, MSItemGroup.LANDS);
+		registerItemBlock(registry, STAT_STORER, MSItemGroup.LANDS);
+		registerItemBlock(registry, REMOTE_OBSERVER, MSItemGroup.LANDS);
+		registerItemBlock(registry, WIRELESS_REDSTONE_TRANSMITTER, MSItemGroup.MAIN);
+		registerItemBlock(registry, WIRELESS_REDSTONE_RECEIVER, MSItemGroup.MAIN);
+		registerItemBlock(registry, SOLID_SWITCH, MSItemGroup.MAIN);
+		registerItemBlock(registry, VARIABLE_SOLID_SWITCH, MSItemGroup.MAIN);
+		registerItemBlock(registry, ONE_SECOND_INTERVAL_TIMED_SOLID_SWITCH, MSItemGroup.MAIN);
+		registerItemBlock(registry, TWO_SECOND_INTERVAL_TIMED_SOLID_SWITCH, MSItemGroup.MAIN);
+		registerItemBlock(registry, SUMMONER, MSItemGroup.LANDS);
+		registerItemBlock(registry, AREA_EFFECT_BLOCK, MSItemGroup.LANDS);
+		registerItemBlock(registry, PLATFORM_GENERATOR, MSItemGroup.LANDS);
+		registerItemBlock(registry, PLATFORM_RECEPTACLE, MSItemGroup.LANDS);
+		registerItemBlock(registry, ITEM_MAGNET, MSItemGroup.MAIN);
+		registerItemBlock(registry, REDSTONE_CLOCK, MSItemGroup.MAIN);
+		registerItemBlock(registry, ROTATOR, MSItemGroup.MAIN);
+		registerItemBlock(registry, FALL_PAD, MSItemGroup.MAIN);
+		registerItemBlock(registry, FRAGILE_STONE, MSItemGroup.MAIN);
+		registerItemBlock(registry, RETRACTABLE_SPIKES, MSItemGroup.MAIN);
+		registerItemBlock(registry, AND_GATE_BLOCK, MSItemGroup.LANDS);
+		registerItemBlock(registry, OR_GATE_BLOCK, MSItemGroup.LANDS);
+		registerItemBlock(registry, XOR_GATE_BLOCK, MSItemGroup.LANDS);
+		registerItemBlock(registry, NAND_GATE_BLOCK, MSItemGroup.LANDS);
+		registerItemBlock(registry, NOR_GATE_BLOCK, MSItemGroup.LANDS);
+		registerItemBlock(registry, XNOR_GATE_BLOCK, MSItemGroup.LANDS);
 		
 		registry.register(new CruxtruderItem(MSBlocks.CRUXTRUDER, new Item.Properties().tab(MSItemGroup.MAIN)).setRegistryName("cruxtruder"));
 		registerItemBlock(registry, CRUXTRUDER_LID, MSItemGroup.MAIN);
@@ -786,6 +879,7 @@ public class MSItems
 		registerItemBlock(registry, new BlockItem(REVERSE_CAKE, new Item.Properties().tab(MSItemGroup.MAIN).stacksTo(1)));
 		registerItemBlock(registry, new BlockItem(FUCHSIA_CAKE, new Item.Properties().tab(MSItemGroup.MAIN).stacksTo(1)));
 		registerItemBlock(registry, new BlockItem(NEGATIVE_CAKE, new Item.Properties().tab(MSItemGroup.MAIN).stacksTo(1)));
+		registerItemBlock(registry, new BlockItem(CARROT_CAKE, new Item.Properties().tab(MSItemGroup.MAIN).stacksTo(1)));
 		
 		registerItemBlock(registry, PRIMED_TNT, MSItemGroup.MAIN);
 		registerItemBlock(registry, UNSTABLE_TNT, MSItemGroup.MAIN);
@@ -797,6 +891,7 @@ public class MSItems
 		registerItemBlock(registry, CHESSBOARD, MSItemGroup.MAIN);
 		registerItemBlock(registry, MINI_FROG_STATUE, MSItemGroup.MAIN);
 		registerItemBlock(registry, MINI_WIZARD_STATUE, MSItemGroup.MAIN);
+		registerItemBlock(registry, MINI_TYPHEUS_STATUE, MSItemGroup.MAIN);
 		registerItemBlock(registry, CASSETTE_PLAYER, MSItemGroup.MAIN);
 		
 		registry.register(new MultiblockItem(MSBlocks.LOTUS_TIME_CAPSULE_BLOCK, new Item.Properties().tab(MSItemGroup.MAIN)).setRegistryName("lotus_time_capsule"));
@@ -852,7 +947,9 @@ public class MSItems
 		registry.register(new WeaponItem(new WeaponItem.Builder(ItemTier.GOLD, 7, -2.4F).efficiency(15.0F).set(MSItemTypes.SWORD_TOOL).add(OnHitEffect.SWEEP).add(OnHitEffect.setOnFire(30)), new Item.Properties().defaultDurability(300).tab(MSItemGroup.WEAPONS)).setRegistryName("cobalt_sabre"));
 		registry.register(new WeaponItem(new WeaponItem.Builder(MSItemTypes.URANIUM_TIER, 4, -2.4F).efficiency(15.0F).set(MSItemTypes.SWORD_TOOL).add(OnHitEffect.SWEEP).add(OnHitEffect.onCrit(OnHitEffect.enemyPotionEffect(() -> new EffectInstance(Effects.WITHER, 100, 1)))), new Item.Properties().tab(MSItemGroup.WEAPONS).rarity(Rarity.UNCOMMON)).setRegistryName("quantum_sabre"));
 		registry.register(new WeaponItem(new WeaponItem.Builder(ItemTier.DIAMOND, 7, -2.4F).efficiency(15.0F).set(MSItemTypes.SWORD_TOOL).add(OnHitEffect.SWEEP), new Item.Properties().tab(MSItemGroup.WEAPONS).rarity(Rarity.RARE)).setRegistryName("shatter_beacon"));
-		registry.register(new WeaponItem(new WeaponItem.Builder(MSItemTypes.MEAT_TIER, 7, -2.4F).efficiency(5.0F).set(MSItemTypes.SWORD_TOOL).add(OnHitEffect.SWEEP).add(OnHitEffect.SORD_DROP), new Item.Properties().tab(MSItemGroup.WEAPONS).rarity(Rarity.UNCOMMON)).setRegistryName("shatter_bacon"));registry.register(new WeaponItem(new WeaponItem.Builder(ItemTier.IRON, 0, -2.0F).efficiency(1.0F).set(MSItemTypes.MISC_TOOL).add(OnHitEffect.backstab(3)), new Item.Properties().tab(MSItemGroup.WEAPONS)).setRegistryName("dagger"));
+		registry.register(new WeaponItem(new WeaponItem.Builder(MSItemTypes.MEAT_TIER, 7, -2.4F).efficiency(5.0F).set(MSItemTypes.SWORD_TOOL).add(OnHitEffect.SWEEP).add(OnHitEffect.SORD_DROP), new Item.Properties().tab(MSItemGroup.WEAPONS).rarity(Rarity.UNCOMMON)).setRegistryName("shatter_bacon"));
+		registry.register(new WeaponItem(new WeaponItem.Builder(MSItemTypes.URANIUM_TIER, 6, -2.6F).efficiency(5.0F).set(MSItemTypes.SWORD_TOOL).add(OnHitEffect.SWEEP).add(OnHitEffect.setOnFire(30)), new Item.Properties().tab(MSItemGroup.WEAPONS)).setRegistryName("subtractshumidire_zomorrodnegative"));
+		registry.register(new WeaponItem(new WeaponItem.Builder(ItemTier.IRON, 0, -2.0F).efficiency(1.0F).set(MSItemTypes.MISC_TOOL).add(OnHitEffect.backstab(3)), new Item.Properties().tab(MSItemGroup.WEAPONS)).setRegistryName("dagger"));
 		registry.register(new WeaponItem(new WeaponItem.Builder(MSItemTypes.SBAHJ_TIER, 1, -2.0F).add(OnHitEffect.SORD_DROP), new Item.Properties().tab(MSItemGroup.WEAPONS)).setRegistryName("nife"));
 		registry.register(new WeaponItem(new WeaponItem.Builder(MSItemTypes.EMERALD_TIER, 1, -2.0F).efficiency(1.0F).set(MSItemTypes.MISC_TOOL).add(OnHitEffect.backstab(4)), new Item.Properties().tab(MSItemGroup.WEAPONS)).setRegistryName("light_of_my_knife"));
 		registry.register(new WeaponItem(new WeaponItem.Builder(MSItemTypes.CORUNDUM_TIER, 1, -2.0F).efficiency(1.0F).set(MSItemTypes.MISC_TOOL).add(OnHitEffect.backstab(9)), new Item.Properties().tab(MSItemGroup.WEAPONS)).setRegistryName("starshard_tri_blade"));
@@ -1053,18 +1150,21 @@ public class MSItems
 		registry.register(new ArmorItem(MSItemTypes.IRON_LASS_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().tab(MSItemGroup.WEAPONS)).setRegistryName("iron_lass_skirt"));
 		registry.register(new ArmorItem(MSItemTypes.IRON_LASS_ARMOR, EquipmentSlotType.FEET, new Item.Properties().tab(MSItemGroup.WEAPONS)).setRegistryName("iron_lass_shoes"));
 		
-		registry.register(new ArmorItem(MSItemTypes.PROSPIT_PAJAMAS, EquipmentSlotType.CHEST, new Item.Properties().tab(MSItemGroup.WEAPONS)).setRegistryName("prospit_shirt"));
-		registry.register(new ArmorItem(MSItemTypes.PROSPIT_PAJAMAS, EquipmentSlotType.LEGS, new Item.Properties().tab(MSItemGroup.WEAPONS)).setRegistryName("prospit_pants"));
-		registry.register(new ArmorItem(MSItemTypes.PROSPIT_PAJAMAS, EquipmentSlotType.FEET, new Item.Properties().tab(MSItemGroup.WEAPONS)).setRegistryName("prospit_shoes"));
-		registry.register(new ArmorItem(MSItemTypes.DERSE_PAJAMAS, EquipmentSlotType.CHEST, new Item.Properties().tab(MSItemGroup.WEAPONS)).setRegistryName("derse_shirt"));
-		registry.register(new ArmorItem(MSItemTypes.DERSE_PAJAMAS, EquipmentSlotType.LEGS, new Item.Properties().tab(MSItemGroup.WEAPONS)).setRegistryName("derse_pants"));
-		registry.register(new ArmorItem(MSItemTypes.DERSE_PAJAMAS, EquipmentSlotType.FEET, new Item.Properties().tab(MSItemGroup.WEAPONS)).setRegistryName("derse_shoes"));
+		registry.register(new MSArmorItem(MSItemTypes.DREAM_PAJAMAS, EquipmentSlotType.HEAD, new Item.Properties().tab(MSItemGroup.WEAPONS)).setRegistryName("prospit_circlet"));
+		registry.register(new MSArmorItem(MSItemTypes.DREAM_PAJAMAS, EquipmentSlotType.CHEST, new Item.Properties().tab(MSItemGroup.WEAPONS)).setRegistryName("prospit_shirt"));
+		registry.register(new MSArmorItem(MSItemTypes.DREAM_PAJAMAS, EquipmentSlotType.LEGS, new Item.Properties().tab(MSItemGroup.WEAPONS)).setRegistryName("prospit_pants"));
+		registry.register(new MSArmorItem(MSItemTypes.DREAM_PAJAMAS, EquipmentSlotType.FEET, new Item.Properties().tab(MSItemGroup.WEAPONS)).setRegistryName("prospit_shoes"));
+		registry.register(new MSArmorItem(MSItemTypes.DREAM_PAJAMAS, EquipmentSlotType.HEAD, new Item.Properties().tab(MSItemGroup.WEAPONS)).setRegistryName("derse_circlet"));
+		registry.register(new MSArmorItem(MSItemTypes.DREAM_PAJAMAS, EquipmentSlotType.CHEST, new Item.Properties().tab(MSItemGroup.WEAPONS)).setRegistryName("derse_shirt"));
+		registry.register(new MSArmorItem(MSItemTypes.DREAM_PAJAMAS, EquipmentSlotType.LEGS, new Item.Properties().tab(MSItemGroup.WEAPONS)).setRegistryName("derse_pants"));
+		registry.register(new MSArmorItem(MSItemTypes.DREAM_PAJAMAS, EquipmentSlotType.FEET, new Item.Properties().tab(MSItemGroup.WEAPONS)).setRegistryName("derse_shoes"));
 		
 		//core items
 		registry.register(new BoondollarsItem(new Item.Properties().stacksTo(1).tab(MSItemGroup.MAIN)).setRegistryName("boondollars"));
 		registry.register(new Item(new Item.Properties().tab(MSItemGroup.MAIN)).setRegistryName("raw_cruxite"));
 		registry.register(new Item(new Item.Properties().tab(MSItemGroup.MAIN)).setRegistryName("raw_uranium"));
 		registry.register(new Item(new Item.Properties().tab(MSItemGroup.MAIN)).setRegistryName("energy_core"));
+		registry.register(new Item(new Item.Properties().tab(MSItemGroup.MAIN)).setRegistryName("plutonium_core"));
 		registry.register(new Item(new Item.Properties().tab(MSItemGroup.MAIN)).setRegistryName("sburb_code"));
 		registry.register(new Item(new Item.Properties().tab(MSItemGroup.MAIN)).setRegistryName("computer_parts"));
 		//have to fix Cruxite artifact classes
@@ -1103,6 +1203,7 @@ public class MSItems
 		registry.register(new Item(new Item.Properties().tab(MSItemGroup.LANDS).food(MSFoods.FUNGAL_SPORE)).setRegistryName("fungal_spore"));
 		registry.register(new Item(new Item.Properties().tab(MSItemGroup.LANDS).food(MSFoods.SPOREO)).setRegistryName("sporeo"));
 		registry.register(new Item(new Item.Properties().tab(MSItemGroup.LANDS).food(MSFoods.MOREL_MUSHROOM)).setRegistryName("morel_mushroom"));
+		registry.register(new Item(new Item.Properties().tab(MSItemGroup.LANDS)).setRegistryName("sushroom"));
 		registry.register(new Item(new Item.Properties().tab(MSItemGroup.LANDS).food(MSFoods.FRENCH_FRY)).setRegistryName("french_fry"));
 		registry.register(new BlockNamedItem(STRAWBERRY_STEM, new Item.Properties().tab(MSItemGroup.LANDS).food(MSFoods.STRAWBERRY_CHUNK)).setRegistryName("strawberry_chunk"));
 		registry.register(new Item(new Item.Properties().stacksTo(16).tab(MSItemGroup.MAIN).food(MSFoods.FOOD_CAN)).setRegistryName("food_can"));

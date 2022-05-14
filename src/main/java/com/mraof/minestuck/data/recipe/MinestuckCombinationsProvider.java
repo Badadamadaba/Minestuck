@@ -610,6 +610,7 @@ public class MinestuckCombinationsProvider extends RecipeProvider
 		CombinationRecipeBuilder.of(MSBlocks.GLOWING_LOG).input(ItemTags.LOGS).or().input(MSBlocks.GLOWING_MUSHROOM).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.GLOWING_PLANKS).input(ItemTags.PLANKS).or().input(MSBlocks.GLOWING_MUSHROOM).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.GLOWY_GOOP).input(Items.SLIME_BLOCK).or().input(MSBlocks.GLOWING_MUSHROOM).build(consumer);
+		CombinationRecipeBuilder.of(MSBlocks.COAGULATED_BLOOD).input(Items.SLIME_BLOCK).and().input(MSItems.BLOOD_BUCKET).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.PETRIFIED_POPPY).namedInput(Items.STONE).or().input(Items.POPPY).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.PETRIFIED_POPPY).namedInput(Items.GRAVEL).or().input(Items.POPPY).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.PETRIFIED_POPPY).namedInput(Items.COBBLESTONE).or().input(Items.POPPY).build(consumer);
@@ -625,6 +626,8 @@ public class MinestuckCombinationsProvider extends RecipeProvider
 		CombinationRecipeBuilder.of(MSBlocks.RAINBOW_SAPLING).input(MSBlocks.RAINBOW_LEAVES).or().input(MSBlocks.RAINBOW_LOG).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.END_SAPLING).input(MSBlocks.END_LEAVES).or().input(MSBlocks.END_LOG).build(consumer);
 		
+		CombinationRecipeBuilder.of(MSBlocks.SPIKES).input(Items.CACTUS).and().input(Items.IRON_SWORD).build(consumer);
+		
 		CombinationRecipeBuilder.of(MSBlocks.COARSE_STONE).input(Items.STONE).and().input(Items.GRAVEL).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.CHISELED_COARSE_STONE).input(Items.CHISELED_STONE_BRICKS).and().namedInput(Items.GRAVEL).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.CHISELED_COARSE_STONE).input(Items.CHISELED_STONE_BRICKS).and().namedInput(MSBlocks.COARSE_STONE).build(consumer);
@@ -636,6 +639,7 @@ public class MinestuckCombinationsProvider extends RecipeProvider
 		CombinationRecipeBuilder.of(MSBlocks.SMOOTH_SHADE_STONE).input(Items.SMOOTH_STONE).or().namedInput(Items.LAPIS_LAZULI).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.SHADE_BRICK_STAIRS).input(Items.STONE_BRICK_STAIRS).or().namedInput(MSBlocks.BLUE_DIRT).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.SHADE_BRICK_STAIRS).input(Items.STONE_BRICK_STAIRS).or().namedInput(Items.LAPIS_LAZULI).build(consumer);
+		CombinationRecipeBuilder.of(MSBlocks.TAR_SHADE_BRICKS).input(MSBlocks.SHADE_BRICKS).and().namedInput(MSItems.OIL_BUCKET).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.FROST_TILE).input(Tags.Items.STONE).and().namedInput(Items.ICE).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.FROST_TILE).input(Tags.Items.STONE).and().namedInput(Items.PACKED_ICE).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.FROST_BRICKS).input(Items.STONE_BRICKS).and().namedInput(Items.ICE).build(consumer);
@@ -645,6 +649,7 @@ public class MinestuckCombinationsProvider extends RecipeProvider
 		CombinationRecipeBuilder.of(MSBlocks.CAST_IRON).input(Items.IRON_BLOCK).and().input(Items.LAVA_BUCKET).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.CHISELED_CAST_IRON).input(Items.CHISELED_STONE_BRICKS).or().input(MSBlocks.CAST_IRON).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.STEEL_BEAM).input(Items.QUARTZ_PILLAR).and().input(MSBlocks.CAST_IRON).build(consumer);
+		CombinationRecipeBuilder.of(MSBlocks.MYCELIUM_STONE).input(Tags.Items.STONE).and().input(Items.MYCELIUM).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.BLACK_STONE).input(Items.STONE).and().namedInput(Items.BLACK_DYE).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.BLACK_STONE).input(Items.STONE).or().namedInput(Items.MAGMA_BLOCK).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.BLACK_SAND).input(Items.SAND).and().namedInput(Items.BLACK_DYE).build(consumer);
@@ -656,6 +661,10 @@ public class MinestuckCombinationsProvider extends RecipeProvider
 		CombinationRecipeBuilder.of(MSBlocks.PINK_STONE).input(Tags.Items.STONE).and().namedInput(Items.PINK_DYE).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.BROWN_STONE).input(Tags.Items.STONE).and().namedInput(Items.BROWN_DYE).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.GREEN_STONE).input(Tags.Items.STONE).and().namedInput(Items.GREEN_DYE).build(consumer);
+		CombinationRecipeBuilder.of(MSBlocks.UNCARVED_WOOD).input(ItemTags.LOGS).and().input(Items.STONE).build(consumer);
+		CombinationRecipeBuilder.of(MSBlocks.CHIPBOARD).input(ItemTags.LOGS).and().input(Items.COBBLESTONE).build(consumer);
+		CombinationRecipeBuilder.of(MSBlocks.WOOD_SHAVINGS).input(ItemTags.LOGS).or().namedInput(Items.STONECUTTER).build(consumer);
+		CombinationRecipeBuilder.of(MSBlocks.WOOD_SHAVINGS).input(ItemTags.LOGS).or().namedInput(MSItems.CARVING_TOOL).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.TREATED_PLANKS).input(ItemTags.PLANKS).or().input(Items.NETHERRACK).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.FROST_PLANKS).input(ItemTags.PLANKS).or().namedInput(Items.SNOW_BLOCK).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.FROST_PLANKS).input(ItemTags.PLANKS).or().namedInput(Items.SNOW).build(consumer);
@@ -680,6 +689,21 @@ public class MinestuckCombinationsProvider extends RecipeProvider
 		CombinationRecipeBuilder.of(MSBlocks.PIPE).input(Items.HOPPER).or().namedInput(Items.BAMBOO).buildFor(consumer, Minestuck.MOD_ID);
 		CombinationRecipeBuilder.of(MSBlocks.PIPE_INTERSECTION).input(MSBlocks.CHALK).and().input(Items.CHISELED_STONE_BRICKS).buildFor(consumer, Minestuck.MOD_ID);
 		CombinationRecipeBuilder.of(MSBlocks.PARCEL_PYXIS).input(MSBlocks.PIPE).or().input(MSItems.MAILBOX).buildFor(consumer, Minestuck.MOD_ID);
+		
+		CombinationRecipeBuilder.of(MSBlocks.TRAJECTORY_BLOCK).input(Items.POWERED_RAIL).or().input(Items.SLIME_BLOCK).buildFor(consumer, Minestuck.MOD_ID);
+		CombinationRecipeBuilder.of(MSBlocks.STAT_STORER).input(Items.COMPARATOR).and().input(MSBlocks.REMOTE_OBSERVER).buildFor(consumer, Minestuck.MOD_ID);
+		CombinationRecipeBuilder.of(MSBlocks.REMOTE_OBSERVER).input(Items.OBSERVER).or().input(MSItems.PLUTONIUM_CORE).buildFor(consumer, Minestuck.MOD_ID);
+		CombinationRecipeBuilder.of(MSBlocks.WIRELESS_REDSTONE_TRANSMITTER).input(Items.REPEATER).or().input(MSItems.PLUTONIUM_CORE).buildFor(consumer, Minestuck.MOD_ID);
+		CombinationRecipeBuilder.of(MSBlocks.WIRELESS_REDSTONE_RECEIVER).input(Items.COMPARATOR).or().input(MSItems.PLUTONIUM_CORE).buildFor(consumer, Minestuck.MOD_ID);
+		CombinationRecipeBuilder.of(MSBlocks.SOLID_SWITCH).input(Items.LEVER).and().input(Items.REDSTONE_LAMP).buildFor(consumer, Minestuck.MOD_ID);
+		CombinationRecipeBuilder.of(MSBlocks.ONE_SECOND_INTERVAL_TIMED_SOLID_SWITCH).input(MSBlocks.SOLID_SWITCH).or().input(Items.STONE_BUTTON).buildFor(consumer, Minestuck.MOD_ID);
+		CombinationRecipeBuilder.of(MSBlocks.TWO_SECOND_INTERVAL_TIMED_SOLID_SWITCH).input(MSBlocks.SOLID_SWITCH).or().input(ItemTags.WOODEN_BUTTONS).buildFor(consumer, Minestuck.MOD_ID);
+		CombinationRecipeBuilder.of(MSBlocks.PLATFORM_GENERATOR).input(Items.PISTON).or().input(Items.SHIELD).buildFor(consumer, Minestuck.MOD_ID);
+		CombinationRecipeBuilder.of(MSBlocks.PLATFORM_RECEPTACLE).input(Items.DAYLIGHT_DETECTOR).or().input(Items.IRON_BLOCK).buildFor(consumer, Minestuck.MOD_ID);
+		CombinationRecipeBuilder.of(MSBlocks.ITEM_MAGNET).input(MSItems.PLUTONIUM_CORE).or().input(Items.FISHING_ROD).buildFor(consumer, Minestuck.MOD_ID);
+		CombinationRecipeBuilder.of(MSBlocks.ROTATOR).input(Items.PISTON).or().input(Items.COMPASS).buildFor(consumer, Minestuck.MOD_ID);
+		CombinationRecipeBuilder.of(MSBlocks.FALL_PAD).input(ItemTags.WOOL).or().input(Items.HAY_BLOCK).buildFor(consumer, Minestuck.MOD_ID);
+		CombinationRecipeBuilder.of(MSBlocks.FRAGILE_STONE).input(Tags.Items.STONE).or().input(Items.GRAVEL).buildFor(consumer, Minestuck.MOD_ID);
 		
 		CombinationRecipeBuilder.of(MSBlocks.STONE_CRUXITE_ORE).input(MSItems.RAW_CRUXITE).and().input(Items.STONE).buildFor(consumer, Minestuck.MOD_ID);
 		CombinationRecipeBuilder.of(MSBlocks.NETHERRACK_CRUXITE_ORE).input(MSItems.RAW_CRUXITE).and().input(Items.NETHERRACK).buildFor(consumer, Minestuck.MOD_ID);
@@ -720,10 +744,10 @@ public class MinestuckCombinationsProvider extends RecipeProvider
 		CombinationRecipeBuilder.of(MSItems.EMERALD_HOE).input(Items.DIAMOND_HOE).or().input(Items.EMERALD).build(consumer);
 		//CombinationRecipeBuilder.of(MSItems.MINE_AND_GRIST).input(Items.DIAMOND_PICKAXE).and().input(MSBlocks.GRIST_WIDGET).build(consumer);
 		
-		Item[] metalHelmets = new Item[] {Items.IRON_HELMET, Items.GOLDEN_HELMET, Items.DIAMOND_HELMET};
-		Item[] metalChestplates = new Item[] {Items.IRON_CHESTPLATE, Items.GOLDEN_CHESTPLATE, Items.DIAMOND_CHESTPLATE};
-		Item[] metalLeggings = new Item[] {Items.IRON_LEGGINGS, Items.GOLDEN_LEGGINGS, Items.DIAMOND_LEGGINGS};
-		Item[] metalBoots = new Item[] {Items.IRON_BOOTS, Items.GOLDEN_BOOTS, Items.DIAMOND_BOOTS};
+		Item[] metalHelmets = new Item[] {Items.IRON_HELMET, Items.GOLDEN_HELMET, Items.NETHERITE_HELMET};
+		Item[] metalChestplates = new Item[] {Items.IRON_CHESTPLATE, Items.GOLDEN_CHESTPLATE, Items.NETHERITE_CHESTPLATE};
+		Item[] metalLeggings = new Item[] {Items.IRON_LEGGINGS, Items.GOLDEN_LEGGINGS, Items.NETHERITE_LEGGINGS};
+		Item[] metalBoots = new Item[] {Items.IRON_BOOTS, Items.GOLDEN_BOOTS, Items.NETHERITE_BOOTS};
 		for(int i = 0; i < metalHelmets.length; i++)	//Two out of three possible for-loops is enough for me
 			for(IItemProvider prismarine : new IItemProvider[]{Items.PRISMARINE_SHARD, Blocks.PRISMARINE})
 			{
@@ -737,6 +761,14 @@ public class MinestuckCombinationsProvider extends RecipeProvider
 		CombinationRecipeBuilder.of(MSItems.IRON_LASS_CHESTPLATE).namedInput(Items.IRON_CHESTPLATE).and().input(MSItems.ENERGY_CORE).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.IRON_LASS_SKIRT).namedInput(Items.IRON_LEGGINGS).and().input(MSItems.ENERGY_CORE).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.IRON_LASS_SHOES).namedInput(Items.IRON_BOOTS).and().input(MSItems.ENERGY_CORE).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.PROSPIT_CIRCLET).namedInput(Items.GOLDEN_HELMET).and().input(MSBlocks.WHITE_CROWN_STAINED_GLASS).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.PROSPIT_SHIRT).namedInput(Items.LEATHER_CHESTPLATE).and().input(MSBlocks.WHITE_CROWN_STAINED_GLASS).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.PROSPIT_PANTS).namedInput(Items.LEATHER_LEGGINGS).and().input(MSBlocks.WHITE_CROWN_STAINED_GLASS).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.PROSPIT_SHOES).namedInput(Items.LEATHER_BOOTS).and().input(MSBlocks.WHITE_CROWN_STAINED_GLASS).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.DERSE_CIRCLET).namedInput(Items.GOLDEN_HELMET).or().input(MSBlocks.BLACK_CROWN_STAINED_GLASS).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.DERSE_SHIRT).namedInput(Items.LEATHER_CHESTPLATE).or().input(MSBlocks.BLACK_CROWN_STAINED_GLASS).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.DERSE_PANTS).namedInput(Items.LEATHER_LEGGINGS).or().input(MSBlocks.BLACK_CROWN_STAINED_GLASS).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.DERSE_SHOES).namedInput(Items.LEATHER_BOOTS).or().input(MSBlocks.BLACK_CROWN_STAINED_GLASS).build(consumer);
 		
 		CombinationRecipeBuilder.of(MSBlocks.PRIMED_TNT).input(Items.TNT).or().input(ItemTags.BUTTONS).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.UNSTABLE_TNT).input(Items.TNT).or().input(Items.REDSTONE_TORCH).build(consumer);
@@ -758,6 +790,7 @@ public class MinestuckCombinationsProvider extends RecipeProvider
 		CombinationRecipeBuilder.of(MSBlocks.REVERSE_CAKE).input(Items.CAKE).or().namedInput(Items.GLASS).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.REVERSE_CAKE).input(Items.CAKE).or().namedInput(Items.GLASS_PANE).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.NEGATIVE_CAKE).input(MSBlocks.REVERSE_CAKE).and().input(MSBlocks.FUCHSIA_CAKE).build(consumer);	//Had a drop in creativity, but I guess its fine
+		CombinationRecipeBuilder.of(MSBlocks.CARROT_CAKE).input(Items.CAKE).or().input(Items.CARROT).build(consumer);
 		
 		CombinationRecipeBuilder.of(MSItems.ROCK_COOKIE).input(Items.COOKIE).and().namedInput(Items.STONE).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.ROCK_COOKIE).input(Items.COOKIE).and().namedInput(Items.COBBLESTONE).build(consumer);
